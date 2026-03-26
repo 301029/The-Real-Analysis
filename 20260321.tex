@@ -1,0 +1,45 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+
+% 导言区
+
+\title{我的第一个\LaTeX 文档}
+\author{109861}
+\date{\today}
+\newtheorem{theorem}{定理}[section]
+
+\begin{document}
+
+\maketitle
+
+
+
+\begin{theorem}[De Morgan]
+    设 $\{E_\alpha\}_{\alpha=1}^n$ 为全集 $X$ 的子集族,令
+    \[
+    A=\left( \bigcup_{\alpha =1}^{n} E_\alpha  \right)^{c},
+    B=\bigcap_{\alpha =1}^{n} E_\alpha^{c} ,
+    \]
+    则 $A = B$。
+    \end{theorem}
+
+    \begin{proof}
+    只需证 $A \subseteq B$ 且 $B \subseteq A$，即证 $A = B$。
+
+    (1)先证 $A \subseteq B$ ,令 $x \in A$,根据补集的定义,得
+    $x$属于$E$,对所有$\alpha $,$ x \notin E_\alpha $
+    即$x$属于每一个$\left( E_\alpha \right)^{c} $
+    即$x \in \left( \bigcap_{\alpha =1}^{n} E_\alpha^{c} \right)$
+    因此$ A \subseteq B$
+
+    (2)再证 $B \subseteq A$,令$x \in B$,根据补集的定义,得
+    $x$属于$E$,且$x$属于每一个$E_\alpha^{c} $
+    即$x$对所有$\alpha $,$ x \notin E_\alpha $
+    即$x \in \left( \bigcup_{\alpha =1}^{n} E_\alpha \right)^{c}$
+    因此$ B \subseteq A$
+
+    综上，$A = B$。
+    \end{proof}
+
+\end{document}
