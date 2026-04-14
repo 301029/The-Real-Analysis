@@ -1,0 +1,24 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+
+\title{My second LATEX document}
+\author{109861}
+\date{14/4/2026}
+\newtheorem{theorem}{Theorem}[section]
+
+\begin{document}
+
+\maketitle
+
+\setcounter{section}{6}
+\setcounter{theorem}{4} 
+
+\begin{theorem}[Cauchy--Schwarz Inequality]
+For any $a_1, a_2, \ldots, a_n \in \mathbb{C}$ and $b_1, b_2, \ldots, b_n \in \mathbb{C}$, the following inequality holds:
+\[
+\left| \sum_{j=1}^{n} a_j \overline{b_j} \right|^2 \leq \left( \sum_{j=1}^{n} |a_j|^2 \right) \left( \sum_{j=1}^{n} |b_j|^2 \right)
+\]
+\end{theorem}
+
+\end{document}
